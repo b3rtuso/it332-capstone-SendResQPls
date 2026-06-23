@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import logo from "../../assets/logo.png";
 
@@ -6,15 +7,19 @@ export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    console.log({
-      username,
-      password,
-    });
-
-    alert("Login submitted!");
+  if (
+    username === "mdrmo" &&
+    password === "sendresqpls2026"
+  ) {
+    navigate("/dashboard");
+  } else {
+    alert("Invalid credentials");
+  }
   };
 
   return (
