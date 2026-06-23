@@ -1,11 +1,8 @@
 
 .dashboard-container {
-  display: grid;
-  grid-template-columns: 280px 1fr;
+  display: flex;
   min-height: 100vh;
-  background: #eef6ff;
-  color: #0f172a;
-  font-family: Inter, system-ui, sans-serif;
+  width: 100%;
 }
 
 .sidebar {
