@@ -1,0 +1,195 @@
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.topbar-left h1{
+
+    margin:0;
+
+    font-size:34px;
+
+    color:#0f172a;
+
+}
+
+.topbar-left p{
+
+    margin-top:6px;
+
+    color:#64748b;
+
+}
+
+.topbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.search-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:white;
+
+    padding:12px 18px;
+
+    border-radius:14px;
+
+    box-shadow:0 8px 25px rgba(15,23,42,.05);
+
+}
+
+.search-box svg{
+
+    color:#64748b;
+
+}
+
+.search-box input{
+
+    border:none;
+
+    outline:none;
+
+    width:220px;
+
+    background:transparent;
+
+    font-size:15px;
+
+}
+
+.status-pill{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 16px;
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+.status-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#22c55e;
+
+}
+
+.icon-btn{
+
+    position:relative;
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:0 8px 25px rgba(15,23,42,.05);
+
+    cursor:pointer;
+
+}
+
+.icon-btn svg{
+
+    font-size:22px;
+
+}
+
+.notification-badge{
+
+    position:absolute;
+
+    top:5px;
+
+    right:5px;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:#ef4444;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:11px;
+
+}
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.profile-icon{
+
+    font-size:42px;
+
+    color:#2563eb;
+
+}
+
+.profile h4{
+
+    margin:0;
+
+}
+
+.profile span{
+
+    color:#64748b;
+
+    font-size:13px;
+
+}
