@@ -1,0 +1,360 @@
+/* ==========================================
+   REQUESTS PAGE
+========================================== */
+
+.requests-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.requests-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.requests-header p {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.request-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+/* ==========================================
+   FILTERS
+========================================== */
+
+.req-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+    min-width: 280px;
+}
+
+.search-box input {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    padding: 0 16px 0 45px;
+    font-size: 14px;
+    outline: none;
+    transition: .3s;
+}
+
+.search-box input:focus {
+    border-color: #2563eb;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+
+.filter-group {
+    display: flex;
+    gap: 12px;
+}
+
+.filter-group select {
+    height: 48px;
+    min-width: 170px;
+    padding: 0 15px;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+    transition: .3s;
+}
+
+.filter-group select:focus {
+    border-color: #2563eb;
+}
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.table-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.requests-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.requests-table thead tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.requests-table th {
+    text-align: left;
+    padding: 18px 16px;
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.requests-table td {
+    padding: 20px 16px;
+    border-bottom: 1px solid #f3f4f6;
+    vertical-align: middle;
+}
+
+.requests-table tbody tr {
+    transition: .25s;
+}
+
+.requests-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+/* ==========================================
+   REQUEST ID
+========================================== */
+
+.request-id {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* ==========================================
+   REPORTER
+========================================== */
+
+.reporter-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.reporter-phone {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* ==========================================
+   LOCATION & TIME
+========================================== */
+
+.info-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #374151;
+    font-size: 14px;
+}
+
+.info-icon {
+    color: #9ca3af;
+}
+
+/* ==========================================
+   STATUS BADGES
+========================================== */
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+/* Pending */
+
+.pending {
+    background: #FEF3C7;
+    color: #B45309;
+}
+
+.pending .status-dot {
+    background: #F59E0B;
+}
+
+/* Assigned */
+
+.assigned {
+    background: #DBEAFE;
+    color: #1D4ED8;
+}
+
+.assigned .status-dot {
+    background: #2563EB;
+}
+
+/* En Route */
+
+.enroute {
+    background: #EDE9FE;
+    color: #6D28D9;
+}
+
+.enroute .status-dot {
+    background: #7C3AED;
+}
+
+/* Completed */
+
+.completed {
+    background: #DCFCE7;
+    color: #15803D;
+}
+
+.completed .status-dot {
+    background: #22C55E;
+}
+
+/* Cancelled */
+
+.cancelled {
+    background: #FEE2E2;
+    color: #B91C1C;
+}
+
+.cancelled .status-dot {
+    background: #EF4444;
+}
+
+/* ==========================================
+   VIEW BUTTON
+========================================== */
+
+.view-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: .25s;
+}
+
+.view-btn:hover {
+    background: #1d4ed8;
+}
+
+/* ==========================================
+   PAGINATION
+========================================== */
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.pagination-info {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.pagination-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.page-btn {
+    min-width: 38px;
+    height: 38px;
+    border: 1px solid #d1d5db;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.page-btn:hover {
+    background: #f3f4f6;
+}
+
+.page-btn.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .req-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group {
+        flex-direction: column;
+    }
+
+    .filter-group select {
+        width: 100%;
+    }
+
+    .pagination {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
