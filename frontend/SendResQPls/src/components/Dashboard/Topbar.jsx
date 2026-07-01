@@ -4,12 +4,11 @@ import "./Topbar.css";
 import {
   FiSearch,
   FiBell,
-  FiCalendar,
 } from "react-icons/fi";
 
 import { FaUserCircle } from "react-icons/fa";
 
-export default function Topbar() {
+export default function Topbar({ title }) {
   const today = new Date().toLocaleDateString("en-US", {
     weekday: "long",
     month: "long",
@@ -19,14 +18,12 @@ export default function Topbar() {
 
   return (
     <header className="topbar">
-
       <div className="topbar-left">
-        <h1>Dashboard</h1>
+        <h1>{title}</h1>
         <p>{today}</p>
       </div>
 
       <div className="topbar-right">
-
         <div className="search-box">
           <FiSearch />
           <input
@@ -53,9 +50,7 @@ export default function Topbar() {
             <span>Administrator</span>
           </div>
         </div>
-
       </div>
-
     </header>
   );
 }

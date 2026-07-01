@@ -10,17 +10,15 @@ import RecentRequests from "../../components/Dashboard/RecentRequests";
 export default function Dashboard() {
   return (
     <div className="dashboard">
-
       <Sidebar />
 
       <main className="dashboard-content">
+        <Topbar title="Dashboard" />
 
-        <Topbar />
         <StatsCards />
         <ChartSection />
         <RecentRequests />
       </main>
-
     </div>
   );
 }

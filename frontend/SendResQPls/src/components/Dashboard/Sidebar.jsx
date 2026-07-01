@@ -1,7 +1,8 @@
 import React from "react";
 import "./Sidebar.css";
-
 import logo from "../../assets/logo.png";
+
+import { NavLink } from "react-router-dom";
 
 import {
   MdDashboard,
@@ -19,11 +20,7 @@ export default function Sidebar() {
     <aside className="sidebar">
       <div>
         <div className="sidebar-header">
-          <img
-            src={logo}
-            alt="SendResQPls"
-            className="sidebar-logo"
-          />
+          <img src={logo} alt="SendResQPls" className="sidebar-logo" />
 
           <div>
             <h2>SendResQPls</h2>
@@ -32,49 +29,75 @@ export default function Sidebar() {
         </div>
 
         <nav className="sidebar-menu">
-
-          <a href="#" className="active">
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) =>
+              isActive ? "sidebar-link active" : "sidebar-link"
+            }
+          >
             <MdDashboard />
             Dashboard
-          </a>
+          </NavLink>
 
-          <a href="#">
+          <NavLink
+            to="/requests"
+            className={({ isActive }) =>
+              isActive ? "sidebar-link active" : "sidebar-link"
+            }
+          >
             <MdAssignment />
             Requests
-          </a>
+          </NavLink>
 
-          <a href="#">
+          <NavLink
+            to="/call-logs"
+            className={({ isActive }) =>
+              isActive ? "sidebar-link active" : "sidebar-link"
+            }
+          >
             <MdCall />
             Call Logs
-          </a>
+          </NavLink>
 
-          <a href="#">
+          <NavLink
+            to="/analytics"
+            className={({ isActive }) =>
+              isActive ? "sidebar-link active" : "sidebar-link"
+            }
+          >
             <MdBarChart />
             Analytics & Reports
-          </a>
+          </NavLink>
 
-          <a href="#">
+          <NavLink
+            to="/departments"
+            className={({ isActive }) =>
+              isActive ? "sidebar-link active" : "sidebar-link"
+            }
+          >
             <MdApartment />
             Departments
-          </a>
+          </NavLink>
 
-          <a href="#">
+          <NavLink
+            to="/settings"
+            className={({ isActive }) =>
+              isActive ? "sidebar-link active" : "sidebar-link"
+            }
+          >
             <MdSettings />
             Settings
-          </a>
-
+          </NavLink>
         </nav>
       </div>
 
       <div className="sidebar-user">
-
         <FaUserCircle className="user-avatar" />
 
         <div>
           <h4>Admin User</h4>
           <span>System Administrator</span>
         </div>
-
       </div>
     </aside>
   );
