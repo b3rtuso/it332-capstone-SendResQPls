@@ -1,7 +1,5 @@
-import React from "react";
 import "./Sidebar.css";
 import logo from "../../assets/logo.png";
-
 import { NavLink } from "react-router-dom";
 
 import {
@@ -15,12 +13,18 @@ import {
 
 import { FaUserCircle } from "react-icons/fa";
 
-export default function Sidebar() {
+function Sidebar() {
   return (
     <aside className="sidebar">
+
       <div>
+
         <div className="sidebar-header">
-          <img src={logo} alt="SendResQPls" className="sidebar-logo" />
+          <img
+            src={logo}
+            alt="SendResQPls"
+            className="sidebar-logo"
+          />
 
           <div>
             <h2>SendResQPls</h2>
@@ -29,6 +33,7 @@ export default function Sidebar() {
         </div>
 
         <nav className="sidebar-menu">
+
           <NavLink
             to="/dashboard"
             className={({ isActive }) =>
@@ -36,7 +41,7 @@ export default function Sidebar() {
             }
           >
             <MdDashboard />
-            Dashboard
+            <span>Dashboard</span>
           </NavLink>
 
           <NavLink
@@ -46,59 +51,58 @@ export default function Sidebar() {
             }
           >
             <MdAssignment />
-            Requests
+            <span>Requests</span>
           </NavLink>
 
           <NavLink
             to="/call-logs"
-            className={({ isActive }) =>
-              isActive ? "sidebar-link active" : "sidebar-link"
-            }
+            className="sidebar-link"
           >
             <MdCall />
-            Call Logs
+            <span>Call Logs</span>
           </NavLink>
 
           <NavLink
             to="/analytics"
-            className={({ isActive }) =>
-              isActive ? "sidebar-link active" : "sidebar-link"
-            }
+            className="sidebar-link"
           >
             <MdBarChart />
-            Analytics & Reports
+            <span>Analytics & Reports</span>
           </NavLink>
 
           <NavLink
             to="/departments"
-            className={({ isActive }) =>
-              isActive ? "sidebar-link active" : "sidebar-link"
-            }
+            className="sidebar-link"
           >
             <MdApartment />
-            Departments
+            <span>Departments</span>
           </NavLink>
 
           <NavLink
             to="/settings"
-            className={({ isActive }) =>
-              isActive ? "sidebar-link active" : "sidebar-link"
-            }
+            className="sidebar-link"
           >
             <MdSettings />
-            Settings
+            <span>Settings</span>
           </NavLink>
+
         </nav>
+
       </div>
 
       <div className="sidebar-user">
+
         <FaUserCircle className="user-avatar" />
 
         <div>
           <h4>Admin User</h4>
           <span>System Administrator</span>
         </div>
+
       </div>
+
     </aside>
   );
 }
+
+export default Sidebar;

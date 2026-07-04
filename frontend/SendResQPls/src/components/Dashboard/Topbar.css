@@ -1,195 +1,171 @@
+/* ==========================================
+   TOPBAR
+========================================== */
+
 .topbar{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
+    min-height:56px;
 
-    margin-bottom:35px;
-
+    margin-bottom:8px;
 }
 
+/* ==========================================
+   LEFT
+========================================== */
+
 .topbar-left h1{
-
     margin:0;
-
-    font-size:34px;
-
-    color:#0f172a;
-
+    font-size:26px;
+    font-weight:700;
+    color:#111827;
+    margin-left:15px;
 }
 
 .topbar-left p{
-
-    margin-top:6px;
-
-    color:#64748b;
-
+    margin-top:4px;
+    font-size:13px;
+    margin-left:15px;
+    color:#6b7280;
 }
+
+/* ==========================================
+   RIGHT
+========================================== */
 
 .topbar-right{
-
     display:flex;
-
     align-items:center;
-
-    gap:18px;
-
+    gap:16px;
 }
 
+/* ==========================================
+   SEARCH
+========================================== */
+
 .search-box{
-
     display:flex;
-
     align-items:center;
-
     gap:10px;
 
-    background:white;
+    width:360px;
+    height:44px;
 
-    padding:12px 18px;
+    background:#fff;
+
+    padding:0 16px;
+
+    border:1px solid #e5e7eb;
 
     border-radius:14px;
-
-    box-shadow:0 8px 25px rgba(15,23,42,.05);
-
 }
 
 .search-box svg{
-
-    color:#64748b;
-
+    color:#9ca3af;
+    font-size:18px;
 }
 
 .search-box input{
+    width:100%;
 
     border:none;
-
     outline:none;
-
-    width:220px;
-
     background:transparent;
 
-    font-size:15px;
-
+    font-size:14px;
 }
 
+/* ==========================================
+   STATUS
+========================================== */
+
 .status-pill{
-
     display:flex;
-
     align-items:center;
-
     gap:8px;
 
-    padding:10px 16px;
+    padding:8px 16px;
+
+    border-radius:30px;
 
     background:#dcfce7;
 
     color:#15803d;
 
-    border-radius:30px;
-
+    font-size:14px;
     font-weight:600;
-
 }
 
 .status-dot{
-
-    width:10px;
-
-    height:10px;
-
+    width:8px;
+    height:8px;
     border-radius:50%;
-
     background:#22c55e;
-
 }
 
-.icon-btn{
+/* ==========================================
+   NOTIFICATION
+========================================== */
 
+.icon-btn{
     position:relative;
 
-    width:46px;
-
-    height:46px;
+    width:40px;
+    height:40px;
 
     border:none;
 
     border-radius:50%;
 
-    background:white;
+    background:#fff;
 
-    box-shadow:0 8px 25px rgba(15,23,42,.05);
+    border:1px solid #e5e7eb;
 
     cursor:pointer;
-
 }
 
 .icon-btn svg{
-
-    font-size:22px;
-
+    font-size:18px;
 }
 
 .notification-badge{
-
     position:absolute;
 
-    top:5px;
-
-    right:5px;
+    top:-3px;
+    right:-3px;
 
     width:18px;
-
     height:18px;
 
     border-radius:50%;
 
-    background:#ef4444;
-
-    color:white;
+    background:#f59e0b;
+    color:#fff;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
     font-size:11px;
-
+    font-weight:600;
 }
 
+/* ==========================================
+   PROFILE
+========================================== */
+
 .profile{
-
     display:flex;
-
     align-items:center;
-
-    gap:12px;
-
 }
 
 .profile-icon{
-
-    font-size:42px;
-
+    font-size:44px;
     color:#2563eb;
-
 }
 
-.profile h4{
-
-    margin:0;
-
-}
-
+.profile h4,
 .profile span{
-
-    color:#64748b;
-
-    font-size:13px;
-
+    display:none;
 }

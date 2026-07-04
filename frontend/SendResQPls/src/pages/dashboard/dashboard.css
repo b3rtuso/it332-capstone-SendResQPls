@@ -1,19 +1,31 @@
-.dashboard{
-
-    display:flex;
-
-    min-height:100vh;
-
-    background:#f5f7fb;
-
+.dashboard {
+    display: flex;
+    height: 100vh;
+    background: #f5f7fb;
+    overflow: hidden;
 }
 
+/* Main content beside the fixed sidebar */
 .dashboard-content{
-
     flex:1;
+    margin-left:256px;
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+    overflow:hidden;
+}
 
-    padding:32px;
+/* Fixed Topbar */
+.dashboard-topbar {
+    flex-shrink: 0;
+    background: #f5f7fb;
+    padding: 8px 10px 0;
+}
 
-    overflow:auto;
-
+/* Scrollable content only */
+.dashboard-body {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 24px;
 }
