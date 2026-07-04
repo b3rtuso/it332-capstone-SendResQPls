@@ -4,6 +4,7 @@ import Login from "./pages/Login/Login";
 import Dashboard from "./pages/dashboard/dashboard";
 import Requests from "./pages/Requests/Requests";
 import RequestDetails from "./pages/RequestDetails/RequestDetails";
+import CallLogs from "./components/Call Logs/CallLogs";
 
 import AdminLayout from "./layouts/AdminLayout";
 
@@ -12,19 +13,30 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        {/* Login Page */}
+        {/* Login */}
         <Route path="/" element={<Login />} />
 
-        {/* Admin Pages */}
+        {/* Admin Layout */}
         <Route element={<AdminLayout />}>
 
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route
+            path="/dashboard"
+            element={<Dashboard />}
+          />
 
-          <Route path="/requests" element={<Requests />} />
+          <Route
+            path="/requests"
+            element={<Requests />}
+          />
 
           <Route
             path="/requests/:id"
             element={<RequestDetails />}
+          />
+
+          <Route
+            path="/call-logs"
+            element={<CallLogs />}
           />
 
         </Route>
@@ -34,4 +46,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
