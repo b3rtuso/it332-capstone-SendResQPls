@@ -22,7 +22,7 @@ export default function Login() {
     e.preventDefault();
 
     if (
-      username === "mdrmo" &&
+      username === "mdrrmo" &&
       password === "sendresqpls2026"
     ) {
       setShowError(false);
@@ -125,7 +125,7 @@ export default function Login() {
         <div className="demo-box">
           <strong>Demo Credentials:</strong>
 
-          <p>Username: mdrmo</p>
+          <p>Username: mdrrmo</p>
           <p>Password: sendresqpls2026</p>
         </div>
       </form>

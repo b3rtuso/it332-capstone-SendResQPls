@@ -44,11 +44,6 @@ export default function Topbar({ title }) {
 
         <div className="profile">
           <FaUserCircle className="profile-icon" />
-
-          <div>
-            <h4>Admin User</h4>
-            <span>Administrator</span>
-          </div>
         </div>
       </div>
     </header>
