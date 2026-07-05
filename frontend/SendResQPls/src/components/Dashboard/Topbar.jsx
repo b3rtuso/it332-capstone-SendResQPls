@@ -24,7 +24,7 @@ export default function Topbar({ title }) {
       </div>
 
       <div className="topbar-right">
-        <div className="search-box">
+        <div className="topbar-search-box">
           <FiSearch />
           <input
             type="text"

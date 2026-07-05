@@ -17,8 +17,8 @@ function ReqTable() {
           <thead>
             <tr>
               <th>Request ID</th>
-              <th>Reporter</th>
-              <th>Emergency</th>
+              <th>Name</th>
+              <th>Type of Emergency</th>
               <th>Location</th>
               <th>Time Reported</th>
               <th>Status</th>
