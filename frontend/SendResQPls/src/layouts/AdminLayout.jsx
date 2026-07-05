@@ -8,16 +8,28 @@ import "../pages/dashboard/dashboard.css";
 function AdminLayout() {
   const location = useLocation();
 
-  let title = "Dashboard";
+  let title;
 
-  if (location.pathname === "/requests") {
+switch (location.pathname) {
+  case "/dashboard":
+    title = "Dashboard";
+    break;
+
+  case "/requests":
     title = "Requests";
-  }
+    break;
 
-  if (location.pathname.startsWith("/requests/")) {
-    title = "Request Details";
-  }
+  case "/call-logs":
+    title = "Call Logs";
+    break;
 
+  default:
+    if (location.pathname.startsWith("/requests/")) {
+      title = "Request Details";
+    } else {
+      title = "Dashboard";
+    }
+}
   return (
     <div className="dashboard">
       <Sidebar />

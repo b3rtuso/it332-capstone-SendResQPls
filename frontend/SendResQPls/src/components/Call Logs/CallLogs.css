@@ -8,3 +8,85 @@
     padding: 30px;
     background: #f8fafc;
 }
+
+.calllogs-page{
+    padding:25px;
+}
+
+.calllogs-card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 8px 25px rgba(15,23,42,.08);
+}
+
+.table-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.table-header h2{
+    margin:0;
+    color:#0f172a;
+}
+
+.table-header span{
+    color:#64748b;
+    font-weight:600;
+}
+
+.calllogs-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.calllogs-table thead{
+    background:#f8fafc;
+}
+
+.calllogs-table th{
+    text-align:left;
+    padding:16px;
+    font-size:14px;
+    color:#475569;
+    border-bottom:2px solid #e2e8f0;
+}
+
+.calllogs-table td{
+    padding:18px 16px;
+    border-bottom:1px solid #edf2f7;
+    color:#334155;
+}
+
+.calllogs-table tbody tr:hover{
+    background:#f8fafc;
+}
+
+.status{
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.status.completed{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.status.responding{
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+.status.pending{
+    background:#fef3c7;
+    color:#b45309;
+}
+
+.status.cancelled{
+    background:#fee2e2;
+    color:#dc2626;
+}
