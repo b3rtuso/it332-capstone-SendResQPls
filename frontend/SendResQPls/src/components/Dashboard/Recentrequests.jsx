@@ -1,112 +1,143 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { FiArrowRight, FiClock, FiMapPin } from "react-icons/fi";
 import "./RecentRequests.css";
 
 const requests = [
   {
-    id: "#INC-1001",
-    incident: "Structure Fire",
-    location: "Brgy. Poblacion",
-    reporter: "Juan Dela Cruz",
-    priority: "High",
-    status: "Responding",
-    time: "2 mins ago",
+    id: "REQ-2026-001",
+    name: "Maria Santos",
+    type: "Pending AI Triage",
+    location: "San Roque",
+    time: "Jul 6, 04:02 PM",
+    status: "Pending",
   },
   {
-    id: "#INC-1002",
-    incident: "Road Accident",
-    location: "National Highway",
-    reporter: "Maria Santos",
-    priority: "Medium",
-    status: "On Scene",
-    time: "8 mins ago",
+    id: "REQ-2026-002",
+    name: "Juan dela Cruz",
+    type: "Pending AI Triage",
+    location: "Poblacion",
+    time: "Jul 6, 03:47 PM",
+    status: "Pending",
   },
   {
-    id: "#INC-1003",
-    incident: "Medical Emergency",
-    location: "Brgy. Canda",
-    reporter: "Pedro Cruz",
-    priority: "Critical",
-    status: "Dispatched",
-    time: "14 mins ago",
+    id: "REQ-2026-003",
+    name: "Barangay Health Worker",
+    type: "Pending AI Triage",
+    location: "Poblacion",
+    time: "Jul 6, 03:32 PM",
+    status: "Pending",
   },
   {
-    id: "#INC-1004",
-    incident: "Flood Rescue",
-    location: "Brgy. Calan",
-    reporter: "Ana Reyes",
-    priority: "Low",
-    status: "Completed",
-    time: "22 mins ago",
+    id: "REQ-2026-004",
+    name: "Traffic Officer",
+    type: "Pending AI Triage",
+    location: "Sukol",
+    time: "Jul 6, 03:17 PM",
+    status: "Pending",
+  },
+  {
+    id: "REQ-2026-005",
+    name: "Barangay Captain Reyes",
+    type: "Pending AI Triage",
+    location: "Calan",
+    time: "Jul 6, 02:47 PM",
+    status: "Pending",
+  },
+  {
+    id: "REQ-2026-006",
+    name: "Emergency Response Center",
+    type: "Pending AI Triage",
+    location: "Balayan",
+    time: "Jul 6, 02:17 PM",
+    status: "Pending",
   },
 ];
 
 export default function RecentRequests() {
+  const navigate = useNavigate();
+
   return (
     <section className="requests-card">
-
       <div className="requests-header">
-
-        <div>
-          <h2>Recent Emergency Requests</h2>
+        <div className="requests-title-group">
+          <h2>Recent Requests</h2>
           <p>Latest emergency incidents received</p>
         </div>
 
-        <button>View All</button>
-
+        <button
+          type="button"
+          className="view-all-btn"
+          onClick={() => navigate("/requests")}
+        >
+          View All
+          <FiArrowRight />
+        </button>
       </div>
 
-      <table>
-
-        <thead>
-
-          <tr>
-            <th>ID</th>
-            <th>Incident</th>
-            <th>Location</th>
-            <th>Reporter</th>
-            <th>Priority</th>
-            <th>Status</th>
-            <th>Time</th>
-          </tr>
-
-        </thead>
-
-        <tbody>
-
-          {requests.map((item) => (
-
-            <tr key={item.id}>
-
-              <td>{item.id}</td>
-
-              <td>{item.incident}</td>
-
-              <td>{item.location}</td>
-
-              <td>{item.reporter}</td>
-
-              <td>
-                <span className={`priority ${item.priority.toLowerCase()}`}>
-                  {item.priority}
-                </span>
-              </td>
-
-              <td>
-                <span className={`status ${item.status.replace(" ","").toLowerCase()}`}>
-                  {item.status}
-                </span>
-              </td>
-
-              <td>{item.time}</td>
-
+      <div className="requests-table-wrapper">
+        <table className="recent-requests-table">
+          <thead>
+            <tr>
+              <th>Request ID</th>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Location</th>
+              <th>Time Reported</th>
+              <th>Status</th>
             </tr>
+          </thead>
 
-          ))}
+          <tbody>
+            {requests.map((item) => (
+              <tr key={item.id}>
+                <td>
+                  <Link
+                    to={`/requests/${item.id}`}
+                    className="request-id-link"
+                  >
+                    {item.id}
+                  </Link>
+                </td>
 
-        </tbody>
+                <td className="request-name">{item.name}</td>
 
-      </table>
+                <td>
+                  <Link
+                    to={`/requests/${item.id}`}
+                    className="request-type-link"
+                  >
+                    <span className="request-type">
+                      {item.type}
+                    <span className="type-dot" />
+                    </span>
+                  </Link>
+                </td>
 
+                <td>
+                  <span className="request-meta">
+                    <FiMapPin />
+                    {item.location}
+                  </span>
+                </td>
+
+                <td>
+                  <span className="request-meta">
+                    <FiClock />
+                    {item.time}
+                  </span>
+                </td>
+
+                <td>
+                  <span className="request-status pending">
+                    {item.status}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </section>
   );
 }

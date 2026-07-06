@@ -10,21 +10,48 @@ function AdminLayout() {
 
   let title = "Dashboard";
 
-  if (location.pathname === "/requests") {
-    title = "Requests";
-  }
+  switch (true) {
+    case location.pathname === "/dashboard":
+      title = "Dashboard";
+      break;
 
-  if (location.pathname.startsWith("/requests/")) {
-    title = "Request Details";
+    case location.pathname === "/requests":
+      title = "Requests";
+      break;
+
+    case location.pathname.startsWith("/requests/"):
+      title = "Request Details";
+      break;
+
+    case location.pathname === "/call-logs":
+      title = "Call Logs";
+      break;
+
+    case location.pathname === "/analytics":
+      title = "Analytics & Reports";
+      break;
+
+    case location.pathname === "/departments":
+      title = "Departments";
+      break;
+
+    case location.pathname === "/settings":
+      title = "Settings";
+      break;
+
+    default:
+      title = "Dashboard";
   }
 
   return (
     <div className="dashboard">
       <Sidebar />
+
       <main className="dashboard-content">
         <div className="dashboard-topbar">
           <Topbar title={title} />
         </div>
+
         <div className="dashboard-body">
           <Outlet />
         </div>
