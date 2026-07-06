@@ -2,170 +2,176 @@
    TOPBAR
 ========================================== */
 
-.topbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    min-height:56px;
-
-    margin-bottom:8px;
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 45px;
+    margin-bottom: 8px;
 }
 
 /* ==========================================
    LEFT
 ========================================== */
 
-.topbar-left h1{
-    margin:0;
-    font-size:26px;
-    font-weight:700;
-    color:#111827;
-    margin-left:15px;
+.topbar-left h1 {
+    margin: 0 0 1px 7px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.2;
 }
 
-.topbar-left p{
-    margin-top:4px;
-    font-size:13px;
-    margin-left:15px;
-    color:#6b7280;
+.topbar-date-time {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    line-height: 1.2;
+    letter-spacing: 0.09em;
+}
+
+.topbar-date {
+    font-size: 10px;
+    color: #6b7280;
+}
+
+.topbar-time {
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #374151;
 }
 
 /* ==========================================
    RIGHT
 ========================================== */
 
-.topbar-right{
-    display:flex;
-    align-items:center;
-    gap:16px;
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 /* ==========================================
    SEARCH
 ========================================== */
 
-.search-box{
-    display:flex;
-    align-items:center;
-    gap:10px;
+.topbar-search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
-    width:360px;
-    height:44px;
+    width: 580px;
+    height: 44px;
 
-    background:#fff;
+    background: #fff;
 
-    padding:0 16px;
+    padding: 0 16px;
 
-    border:1px solid #e5e7eb;
-
-    border-radius:14px;
+    border: 1px solid #709df7;
+    border-radius: 14px;
 }
 
-.search-box svg{
-    color:#9ca3af;
-    font-size:18px;
+.topbar-search-box svg {
+    color: #709df7;
+    font-size: 18px;
 }
 
-.search-box input{
-    width:100%;
-
-    border:none;
-    outline:none;
-    background:transparent;
-
-    font-size:14px;
+.topbar-search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
 }
 
 /* ==========================================
    STATUS
 ========================================== */
 
-.status-pill{
-    display:flex;
-    align-items:center;
-    gap:8px;
+.status-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 
-    padding:8px 16px;
+    padding: 8px 16px;
 
-    border-radius:30px;
+    border-radius: 30px;
 
-    background:#dcfce7;
+    background: #dcfce7;
+    color: #15803d;
 
-    color:#15803d;
-
-    font-size:14px;
-    font-weight:600;
+    font-size: 14px;
+    font-weight: 600;
 }
 
-.status-dot{
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:#22c55e;
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
 }
 
 /* ==========================================
    NOTIFICATION
 ========================================== */
 
-.icon-btn{
-    position:relative;
+.icon-btn {
+    position: relative;
 
-    width:40px;
-    height:40px;
+    width: 40px;
+    height: 40px;
 
-    border:none;
+    border: none;
+    border-radius: 50%;
 
-    border-radius:50%;
+    background: #fff;
+    border: 1px solid #e5e7eb;
 
-    background:#fff;
-
-    border:1px solid #e5e7eb;
-
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.icon-btn svg{
-    font-size:18px;
+.icon-btn svg {
+    font-size: 18px;
 }
 
-.notification-badge{
-    position:absolute;
+.notification-badge {
+    position: absolute;
 
-    top:-3px;
-    right:-3px;
+    top: -3px;
+    right: -3px;
 
-    width:18px;
-    height:18px;
+    width: 18px;
+    height: 18px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
-    background:#f59e0b;
-    color:#fff;
+    background: #f59e0b;
+    color: #fff;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    font-size:11px;
-    font-weight:600;
+    font-size: 11px;
+    font-weight: 600;
 }
 
 /* ==========================================
    PROFILE
 ========================================== */
 
-.profile{
-    display:flex;
-    align-items:center;
+.profile {
+    display: flex;
+    align-items: center;
 }
 
-.profile-icon{
-    font-size:44px;
-    color:#2563eb;
+.profile-icon {
+    font-size: 44px;
+    color: #2563eb;
 }
 
 .profile h4,
-.profile span{
-    display:none;
+.profile span {
+    display: none;
 }
