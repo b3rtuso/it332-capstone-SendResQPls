@@ -8,50 +8,35 @@ import "../pages/dashboard/dashboard.css";
 function AdminLayout() {
   const location = useLocation();
 
-  let title = "Dashboard";
+  let title;
 
-  switch (true) {
-    case location.pathname === "/dashboard":
-      title = "Dashboard";
-      break;
+switch (location.pathname) {
+  case "/dashboard":
+    title = "Dashboard";
+    break;
 
-    case location.pathname === "/requests":
-      title = "Requests";
-      break;
+  case "/requests":
+    title = "Requests";
+    break;
 
-    case location.pathname.startsWith("/requests/"):
+  case "/call-logs":
+    title = "Call Logs";
+    break;
+
+  default:
+    if (location.pathname.startsWith("/requests/")) {
       title = "Request Details";
-      break;
-
-    case location.pathname === "/call-logs":
-      title = "Call Logs";
-      break;
-
-    case location.pathname === "/analytics":
-      title = "Analytics & Reports";
-      break;
-
-    case location.pathname === "/departments":
-      title = "Departments";
-      break;
-
-    case location.pathname === "/settings":
-      title = "Settings";
-      break;
-
-    default:
+    } else {
       title = "Dashboard";
-  }
-
+    }
+}
   return (
     <div className="dashboard">
       <Sidebar />
-
       <main className="dashboard-content">
         <div className="dashboard-topbar">
           <Topbar title={title} />
         </div>
-
         <div className="dashboard-body">
           <Outlet />
         </div>

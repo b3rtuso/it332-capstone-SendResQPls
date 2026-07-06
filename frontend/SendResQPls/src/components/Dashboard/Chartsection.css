@@ -1,163 +1,140 @@
-.chart-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 2.1fr) minmax(300px, 1fr);
-  gap: 22px;
-  margin-bottom: 30px;
+.chart-layout{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:24px;
+
+    margin-bottom:30px;
+
 }
 
 .chart-card,
-.department-card {
-  background: #ffffff;
-  border: 1px solid #edf0f5;
-  border-radius: 18px;
-  padding: 24px;
-  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
+.department-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:24px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
 }
 
-.section-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 18px;
+.section-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
 }
 
-.section-title h2 {
-  margin: 0;
-  color: #111827;
-  font-size: 16px;
-  font-weight: 700;
+.section-title h2{
+
+    margin:0;
+
+    font-size:22px;
+
 }
 
-.chart-wrapper {
-  width: 100%;
-  min-height: 300px;
+.section-title span{
+
+    color:#64748b;
+
+    font-size:14px;
+
 }
 
-/* Department Status panel */
-.department-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-height: 310px;
-  overflow-y: auto;
-  padding-right: 4px;
+.department-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
 }
 
-.department-list::-webkit-scrollbar {
-  width: 5px;
+.department-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
 }
 
-.department-list::-webkit-scrollbar-thumb {
-  background: #dbe3ee;
-  border-radius: 10px;
+.department-item h4{
+
+    margin:0;
+
 }
 
-.department-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 13px 12px;
-  background: #f8fafc;
-  border-radius: 14px;
+.department-item span{
+
+    color:#64748b;
+
+    font-size:14px;
+
 }
 
-.department-info {
-  min-width: 0;
+.dept-icon{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:22px;
+
 }
 
-.department-info h4 {
-  margin: 0 0 4px;
-  color: #111827;
-  font-size: 14px;
-  font-weight: 700;
+.blue{
+
+    background:#2563eb;
+
 }
 
-.department-info span {
-  display: block;
-  overflow: hidden;
-  color: #64748b;
-  font-size: 11px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.red{
+
+    background:#ef4444;
+
 }
 
-.department-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
+.green{
+
+    background:#22c55e;
+
 }
 
-.department-call-icon {
-  color: #00a99d;
-  font-size: 17px;
+.orange{
+
+    background:#f97316;
+
 }
 
-.department-item .availability-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 66px;
-  padding: 6px 10px;
-  border-radius: 8px;
-  background: #08a99a;
-  color: #ffffff;
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1;
-  text-transform: lowercase;
-  white-space: nowrap;
+@media(max-width:1000px){
+
+.chart-layout{
+
+grid-template-columns:1fr;
+
 }
 
-/* Responsive layout */
-@media (max-width: 1050px) {
-  .chart-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .department-list {
-    max-height: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .chart-card,
-  .department-card {
-    padding: 18px;
-    border-radius: 15px;
-  }
-
-  .department-item {
-    padding: 12px 10px;
-  }
-
-  .department-actions {
-    gap: 8px;
-  }
-
-  .department-item .availability-badge {
-    min-width: auto;
-    padding: 5px 8px;
-  }
-}
-
-.department-name.bfp {
-  color: #ef4444;
-}
-
-.department-name.pnp {
-  color: #2563eb;
-}
-
-.department-name.mho {
-  color: #ec4899;
-}
-
-.department-name.mdrrmo {
-  color: #f97316;
-}
-
-.department-name.meo {
-  color: #8b5cf6;
 }

@@ -18,10 +18,8 @@
 /* Fixed Topbar */
 .dashboard-topbar {
     flex-shrink: 0;
-    background: #fff;
+    background: #f5f7fb;
     padding: 8px 10px 0;
-    border-bottom: 1px solid #e5e7eb;
-
 }
 
 /* Scrollable content only */
@@ -29,6 +27,5 @@
     flex: 1;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 16px 24px 24px;
+    padding: 24px;
 }
-

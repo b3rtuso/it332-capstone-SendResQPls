@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import { FiMapPin, FiClock, FiEye } from "react-icons/fi";
 
+import ReqTableRow from "./ReqTableRow";
 import requests from "../../data/requests";
 
 function ReqTable() {
   const navigate = useNavigate();
 
   return (
-    <div className="request-card request-table-card">
+    <div className="request-card">
       <div className="table-header">
         <h2>{requests.length} Requests</h2>
       </div>
@@ -17,8 +17,8 @@ function ReqTable() {
           <thead>
             <tr>
               <th>Request ID</th>
-              <th>Name</th>
-              <th>Type of Emergency</th>
+              <th>Reporter</th>
+              <th>Emergency</th>
               <th>Location</th>
               <th>Time Reported</th>
               <th>Status</th>
@@ -28,68 +28,13 @@ function ReqTable() {
 
           <tbody>
             {requests.map((request) => (
-              <tr key={request.id}>
-                <td>
-                  <button
-                    type="button"
-                    className="request-id-link"
-                    onClick={() => navigate(`/requests/${request.id}`)}
-                  >
-                    {request.id}
-                  </button>
-                </td>
-
-                <td>
-                  <div className="request-name">{request.name}</div>
-                  <div className="request-phone">{request.phone}</div>
-                </td>
-
-                <td>
-                  <button
-                    type="button"
-                    className="request-type-link"
-                    onClick={() => navigate(`/requests/${request.id}`)}
-                  >
-                    <span className="request-type">{request.type}</span>
-                    <span className="type-dot" />
-                  </button>
-                </td>
-
-                <td>
-                  <span className="request-meta">
-                    <FiMapPin />
-                    {request.location}
-                  </span>
-                </td>
-
-                <td>
-                  <span className="request-meta">
-                    <FiClock />
-                    {request.time}
-                  </span>
-                </td>
-
-                <td>
-                  <span
-                    className={`request-status ${request.status
-                      .toLowerCase()
-                      .replace(/\s+/g, "-")}`}
-                  >
-                    {request.status}
-                  </span>
-                </td>
-
-                <td>
-                  <button
-                    type="button"
-                    className="view-btn"
-                    onClick={() => navigate(`/requests/${request.id}`)}
-                  >
-                    <FiEye />
-                    View
-                  </button>
-                </td>
-              </tr>
+              <ReqTableRow
+                key={request.id}
+                request={request}
+                onView={() =>
+                  navigate(`/requests/${request.id}`)
+                }
+              />
             ))}
           </tbody>
         </table>

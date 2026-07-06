@@ -4,34 +4,38 @@ import "./StatsCards.css";
 import {
   FiFileText,
   FiAlertTriangle,
-  FiSend,
-  FiCheckCircle,
+  FiUsers,
+  FiClock,
 } from "react-icons/fi";
 
 const stats = [
   {
     title: "Total Requests",
-    value: "7",
+    value: "1,248",
+    change: "+12%",
     icon: <FiFileText />,
-    color: "neutral",
+    color: "blue",
   },
   {
-    title: "Pending",
-    value: "7",
+    title: "Active Incidents",
+    value: "23",
+    change: "+5%",
     icon: <FiAlertTriangle />,
-    color: "pending",
+    color: "red",
   },
   {
-    title: "Dispatched",
-    value: "0",
-    icon: <FiSend />,
-    color: "dispatched",
+    title: "Responders",
+    value: "86",
+    change: "+8%",
+    icon: <FiUsers />,
+    color: "green",
   },
   {
-    title: "Completed",
-    value: "0",
-    icon: <FiCheckCircle />,
-    color: "completed",
+    title: "Avg. Response",
+    value: "4.8 min",
+    change: "-10%",
+    icon: <FiClock />,
+    color: "orange",
   },
 ];
 
@@ -40,8 +44,10 @@ export default function StatsCards() {
     <section className="stats-grid">
       {stats.map((item, index) => (
         <div className={`stats-card ${item.color}`} key={index}>
-          <div className="stats-content">
-            <div className="stats-details">
+
+          <div className="stats-top">
+
+            <div>
               <p>{item.title}</p>
               <h2>{item.value}</h2>
             </div>
@@ -49,7 +55,13 @@ export default function StatsCards() {
             <div className="stats-icon">
               {item.icon}
             </div>
+
           </div>
+
+          <span className="stats-change">
+            {item.change} this month
+          </span>
+
         </div>
       ))}
     </section>
