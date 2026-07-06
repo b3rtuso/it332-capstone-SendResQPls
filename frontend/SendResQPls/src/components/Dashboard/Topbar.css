@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 56px;
+    min-height: 45px;
     margin-bottom: 8px;
 }
 
@@ -15,17 +15,31 @@
 ========================================== */
 
 .topbar-left h1 {
-    margin: 0;
-    margin-left: 15px;
-    font-size: 32px;
+    margin: 0 0 1px 7px;
+    font-size: 20px;
     font-weight: 700;
     color: #111827;
+    line-height: 1.2;
 }
 
-.topbar-left p {
-    margin: 4px 0 0 25px;
-    font-size: 12px;
+.topbar-date-time {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    line-height: 1.2;
+    letter-spacing: 0.09em;
+}
+
+.topbar-date {
+    font-size: 10px;
     color: #6b7280;
+}
+
+.topbar-time {
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #374151;
 }
 
 /* ==========================================
@@ -47,19 +61,19 @@
     align-items: center;
     gap: 10px;
 
-    width: 450px;
+    width: 580px;
     height: 44px;
 
     background: #fff;
 
     padding: 0 16px;
 
-    border: 1px solid #e5e7eb;
+    border: 1px solid #709df7;
     border-radius: 14px;
 }
 
 .topbar-search-box svg {
-    color: #9ca3af;
+    color: #709df7;
     font-size: 18px;
 }
 

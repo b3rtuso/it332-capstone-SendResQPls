@@ -56,7 +56,7 @@ function Sidebar() {
 
           <NavLink
             to="/call-logs"
-            className="sidebar-link"
+            className={({ isActive }) =>isActive ? "sidebar-link active" : "sidebar-link"}
           >
             <MdCall />
             <span>Call Logs</span>
@@ -64,7 +64,7 @@ function Sidebar() {
 
           <NavLink
             to="/analytics"
-            className="sidebar-link"
+            className={({ isActive }) =>isActive ? "sidebar-link active" : "sidebar-link"}
           >
             <MdBarChart />
             <span>Analytics & Reports</span>
@@ -72,7 +72,7 @@ function Sidebar() {
 
           <NavLink
             to="/departments"
-            className="sidebar-link"
+            className={({ isActive }) =>isActive ? "sidebar-link active" : "sidebar-link"}
           >
             <MdApartment />
             <span>Departments</span>
@@ -80,7 +80,8 @@ function Sidebar() {
 
           <NavLink
             to="/settings"
-            className="sidebar-link"
+            className={({ isActive }) =>
+              isActive ? "sidebar-link active" : "sidebar-link"}
           >
             <MdSettings />
             <span>Settings</span>
