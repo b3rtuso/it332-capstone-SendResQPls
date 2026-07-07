@@ -6,9 +6,9 @@ import Requests from "./pages/Requests/Requests";
 import RequestDetails from "./pages/RequestDetails/RequestDetails";
 import CallLogs from "./components/Call Logs/CallLogs";
 import AnalyticsReports from "./pages/Analytics & Reports/AnalyReports";
+import Departments from "./pages/Departments/Departments";
 
 import AdminLayout from "./layouts/AdminLayout";
-import Departments from "./layouts/departments";
 
 function App() {
   return (
