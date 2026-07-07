@@ -121,25 +121,14 @@ export default function AnalyReports(){
     <div className="analytics-page">
             {/* HEADER */}
       <div className="analytics-heading">
-
-        <div className="analytics-title">
-
+        <div className="analytics-title-group">
           <h1>
             Analytics & Incident Reports
           </h1>
 
-
           <p>
-            {formattedDate}
-            <span>
-              {formattedTime}
-            </span>
-          </p>
-
-
-          <small>
             Performance metrics, trends, and incident documentation
-          </small>
+          </p>
 
         </div>
 

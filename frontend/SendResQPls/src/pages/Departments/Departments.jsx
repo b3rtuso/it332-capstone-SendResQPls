@@ -38,13 +38,14 @@ const departments = [
 
 export default function Departments() {
   return (
-    <div className="department-layout">
-
-      <div className="department-header">
-        <h1>Departments</h1>
-        <p>
-          Manage MDRRMO partner departments and emergency response contacts.
-        </p>
+    <div className="department-page">
+      <div className="department-heading">
+        <div className="department-title-group">
+          <h1>Departments</h1>
+            <p>
+              Manage MDRRMO partner departments and emergency response contacts.
+            </p>
+        </div>
       </div>
 
       <div className="department-container">
