@@ -7,6 +7,7 @@ import RequestDetails from "./pages/RequestDetails/RequestDetails";
 import CallLogs from "./components/Call Logs/CallLogs";
 
 import AdminLayout from "./layouts/AdminLayout";
+import DepartmentLayout from "./layouts/department.jsx";
 
 function App() {
   return (
@@ -37,6 +38,11 @@ function App() {
           <Route
             path="/call-logs"
             element={<CallLogs />}
+          />
+
+          <Route
+            path="/departments"
+            element={<DepartmentLayout />}
           />
 
         </Route>
