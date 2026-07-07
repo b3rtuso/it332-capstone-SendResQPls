@@ -6,8 +6,8 @@ import Requests from "./pages/Requests/Requests";
 import RequestDetails from "./pages/RequestDetails/RequestDetails";
 import CallLogs from "./components/Call Logs/CallLogs";
 
-import AdminLayout from "./layouts/AdminLayout";
-import DepartmentLayout from "./layouts/department.jsx";
+import AdminLayout from "./Department.layout/AdminLayout";
+import DepartmentLayout from "./Department.layout/department.jsx";
 
 function App() {
   return (
