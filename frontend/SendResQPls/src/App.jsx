@@ -8,6 +8,7 @@ import CallLogs from "./components/Call Logs/CallLogs";
 import AnalyticsReports from "./pages/Analytics & Reports/AnalyReports";
 
 import AdminLayout from "./layouts/AdminLayout";
+import Departments from "./layouts/departments";
 
 function App() {
   return (
@@ -50,6 +51,10 @@ function App() {
             element={<AnalyticsReports />}
           />
 
+          <Route 
+            path="/departments" 
+            element={<Departments />} 
+          />
         </Route>
 
       </Routes>
