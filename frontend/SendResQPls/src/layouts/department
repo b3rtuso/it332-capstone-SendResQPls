@@ -1,0 +1,31 @@
+import Departments from "./pages/dashboard/Departments";
+
+<Route element={<AdminLayout />}>
+  <Route path="/dashboard" element={<Dashboard />} />
+  <Route path="/requests" element={<Requests />} />
+  <Route path="/call-logs" element={<CallLogs />} />
+  <Route path="/analytics" element={<Analytics />} />
+  <Route path="/departments" element={<Departments />} />
+  <Route path="/settings" element={<Settings />} />
+</Route>
+function Departments() {
+  return (
+    <div>
+      <h2>Departments</h2>
+      <p>Manage MDRRMO departments here.</p>
+    </div>
+  );
+}
+
+export default Departments;
+import { NavLink } from "react-router-dom";
+
+<NavLink to="/departments" className="sidebar-link">
+  Departments
+</NavLink>
+
+{
+  name: "Departments",
+  path: "/departments",
+  icon: <FaBuilding />,
+}
