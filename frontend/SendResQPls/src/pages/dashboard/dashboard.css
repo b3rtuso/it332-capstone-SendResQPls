@@ -1,34 +1,149 @@
 .dashboard {
-    display: flex;
-    height: 100vh;
-    background: #f5f7fb;
-    overflow: hidden;
+  display: flex;
+  height: 100vh;
+  background: #f5f7fb;
+  overflow: hidden;
 }
 
-/* Main content beside the fixed sidebar */
-.dashboard-content{
-    flex:1;
-    margin-left:256px;
-    display:flex;
-    flex-direction:column;
-    height:100vh;
-    overflow:hidden;
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.dashboard-content {
+  flex: 1;
+  margin-left: 256px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Fixed Topbar */
+/* ==========================================
+   FIXED TOPBAR
+========================================== */
+
 .dashboard-topbar {
-    flex-shrink: 0;
-    background: #fff;
-    padding: 8px 10px 0;
-    border-bottom: 1px solid #e5e7eb;
-
+  flex-shrink: 0;
+  background: #fff;
+  padding: 2px 10px 0;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-/* Scrollable content only */
+/* ==========================================
+   SCROLLABLE BODY
+========================================== */
+
 .dashboard-body {
-    flex: 1;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: 16px 24px 24px;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 16px 24px 24px;
 }
 
+/* ==========================================
+   DASHBOARD PAGE
+========================================== */
+
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.dashboard-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 2px 0 0;
+}
+
+.dashboard-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-title-group h1 {
+  margin: 0 0 1px 7px;
+  color: #111827;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.dashboard-title-group p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  margin: 4px 0 0 10px;
+
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.09em;
+}
+
+.dashboard-title-group p span {
+  color: #262c36;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Courier New", monospace;
+}
+
+/* ==========================================
+   PENDING BADGE
+========================================== */
+
+.pending-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 16px;
+
+  border-radius: 14px;
+  border: 1px solid #fdc97a;
+
+  background: #fff7e8;
+  color: #b76d00;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+
+.pending-badge svg {
+  font-size: 15px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+  .dashboard-body {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 650px) {
+  .dashboard-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .pending-badge {
+    align-self: flex-start;
+  }
+
+  .dashboard-title-group h1 {
+    font-size: 22px;
+  }
+}

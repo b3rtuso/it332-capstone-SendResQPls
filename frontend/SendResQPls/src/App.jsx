@@ -22,26 +22,31 @@ function App() {
         {/* Admin Layout */}
         <Route element={<AdminLayout />}>
 
+          {/* Dashboard */}
           <Route
             path="/dashboard"
             element={<Dashboard />}
           />
 
+          {/* Requests */}
           <Route
             path="/requests"
             element={<Requests />}
           />
 
+          {/* Request Details */}
           <Route
             path="/requests/:id"
             element={<RequestDetails />}
           />
 
+          {/* Call Logs */}
           <Route
             path="/call-logs"
             element={<CallLogs />}
           />
 
+          {/* Analytics & Reports */}
           <Route
             path="/analytics"
             element={<Analytics />}
@@ -56,7 +61,6 @@ function App() {
             path="/settings"
             element={<Settings />}
           />
-
         </Route>
 
       </Routes>
@@ -64,4 +68,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;

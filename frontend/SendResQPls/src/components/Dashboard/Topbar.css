@@ -3,53 +3,16 @@
 ========================================== */
 
 .topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 45px;
-    margin-bottom: 8px;
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-/* ==========================================
-   LEFT
-========================================== */
+  height: 65px;
 
-.topbar-left h1 {
-    margin: 0 0 1px 7px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #111827;
-    line-height: 1.2;
-}
+  padding: 10px 22px;
 
-.topbar-date-time {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    line-height: 1.2;
-    letter-spacing: 0.09em;
-}
-
-.topbar-date {
-    font-size: 10px;
-    color: #6b7280;
-}
-
-.topbar-time {
-    margin-top: 4px;
-    font-size: 12px;
-    font-weight: 700;
-    color: #374151;
-}
-
-/* ==========================================
-   RIGHT
-========================================== */
-
-.topbar-right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 /* ==========================================
@@ -57,32 +20,52 @@
 ========================================== */
 
 .topbar-search-box {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 
-    width: 580px;
-    height: 44px;
+  width: 500px;
+  max-width: 100%;
 
-    background: #fff;
+  height: 42px;
 
-    padding: 0 16px;
+  padding: 0 16px;
 
-    border: 1px solid #709df7;
-    border-radius: 14px;
+  background: #fafbfc;
+
+  border: 1px solid #d8dee9;
+  border-radius: 15px;
 }
 
 .topbar-search-box svg {
-    color: #709df7;
-    font-size: 18px;
+  color: #94a3b8;
+  font-size: 18px;
 }
 
 .topbar-search-box input {
-    width: 100%;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 14px;
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 14px;
+  color: #111827;
+}
+
+.topbar-search-box input::placeholder {
+  color: #64748b;
+}
+
+/* ==========================================
+   RIGHT SIDE
+========================================== */
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 /* ==========================================
@@ -90,26 +73,30 @@
 ========================================== */
 
 .status-pill {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 
-    padding: 8px 16px;
+  padding: 8px 16px;
 
-    border-radius: 30px;
+  border: 1px solid #bfe7df;
+  border-radius: 999px;
 
-    background: #dcfce7;
-    color: #15803d;
+  background: #ecfdf8;
 
-    font-size: 14px;
-    font-weight: 600;
+  color: #0f8f78;
+
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .status-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #22c55e;
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #14b8a6;
 }
 
 /* ==========================================
@@ -117,61 +104,109 @@
 ========================================== */
 
 .icon-btn {
-    position: relative;
+  position: relative;
 
-    width: 40px;
-    height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    border: none;
-    border-radius: 50%;
+  width: 40px;
+  height: 40px;
 
-    background: #fff;
-    border: 1px solid #e5e7eb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
 
-    cursor: pointer;
+  background: #ffffff;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.icon-btn:hover {
+  background: #f8fafc;
 }
 
 .icon-btn svg {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .notification-badge {
-    position: absolute;
+  position: absolute;
 
-    top: -3px;
-    right: -3px;
+  top: -5px;
+  right: -5px;
 
-    width: 18px;
-    height: 18px;
+  width: 20px;
+  height: 20px;
 
-    border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    background: #f59e0b;
-    color: #fff;
+  border-radius: 50%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: #fbbf24;
 
-    font-size: 11px;
-    font-weight: 600;
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.topbar-divider {
+  width: 1px;
+  height: 32px;
+
+  background: #e5e7eb;
 }
 
 /* ==========================================
    PROFILE
 ========================================== */
 
-.profile {
-    display: flex;
-    align-items: center;
+.profile-btn {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #0f56c9;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
 }
 
-.profile-icon {
-    font-size: 44px;
-    color: #2563eb;
-}
+/* ==========================================
+   RESPONSIVE
+========================================== */
 
-.profile h4,
-.profile span {
+@media (max-width: 768px) {
+  .topbar {
+    gap: 12px;
+    padding: 0 16px;
+  }
+
+  .topbar-search-box {
+    width: 100%;
+  }
+
+  .status-pill {
     display: none;
+  }
+
+  .topbar-divider {
+    display: none;
+  }
 }
