@@ -1,0 +1,14 @@
+.analytics-page {
+  padding: 24px;
+}
+
+.analytics-page h2 {
+  margin-bottom: 16px;
+  color: #1f2937;
+}
+
+.analytics-page p {
+  max-width: 640px;
+  line-height: 1.7;
+  color: #4b5563;
+}

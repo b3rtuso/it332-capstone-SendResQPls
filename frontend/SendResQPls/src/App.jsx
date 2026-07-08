@@ -5,10 +5,11 @@ import Dashboard from "./pages/dashboard/dashboard";
 import Requests from "./pages/Requests/Requests";
 import RequestDetails from "./pages/RequestDetails/RequestDetails";
 import CallLogs from "./components/Call Logs/CallLogs";
-import AnalyticsReports from "./pages/Analytics & Reports/AnalyReports";
-import Departments from "./pages/Departments/Departments";
+import Analytics from "./pages/Analytics/Analytics";
+import Settings from "./pages/Settings/Settings";
 
-import AdminLayout from "./layouts/AdminLayout";
+import AdminLayout from "./Department.layout/AdminLayout";
+import DepartmentLayout from "./Department.layout/department.jsx";
 
 function App() {
   return (
@@ -48,12 +49,17 @@ function App() {
           {/* Analytics & Reports */}
           <Route
             path="/analytics"
-            element={<AnalyticsReports />}
+            element={<Analytics />}
           />
 
-          <Route 
-            path="/departments" 
-            element={<Departments />} 
+          <Route
+            path="/departments"
+            element={<DepartmentLayout />}
+          />
+
+          <Route
+            path="/settings"
+            element={<Settings />}
           />
         </Route>
 

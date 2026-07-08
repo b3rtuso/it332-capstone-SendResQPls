@@ -41,7 +41,6 @@
   letter-spacing: 0.09em;
 }
 
-/* Container */
 .department-container {
   display: flex;
   flex-direction: column;
@@ -49,7 +48,6 @@
 }
 
 
-/* Grid */
 .department-grid {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -69,7 +67,6 @@
 }
 
 
-/* Department Card */
 .department-card-item {
   background: #ffffff;
   border: 1px solid rgba(15, 23, 42, 0.08);
@@ -83,8 +80,6 @@
   padding: 1.5rem;
 }
 
-
-/* Card Header */
 .card-header {
   align-items: center;
   display: flex;
