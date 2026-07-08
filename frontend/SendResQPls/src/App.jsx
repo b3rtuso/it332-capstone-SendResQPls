@@ -9,7 +9,7 @@ import Analytics from "./pages/Analytics/Analytics";
 import Settings from "./pages/Settings/Settings";
 
 import AdminLayout from "./Department.layout/AdminLayout";
-import DepartmentLayout from "./Department.layout/department.jsx";
+import Departments from "./pages/Departments/Departments";
 
 function App() {
   return (
@@ -54,7 +54,7 @@ function App() {
 
           <Route
             path="/departments"
-            element={<DepartmentLayout />}
+            element={<Departments />}
           />
 
           <Route
