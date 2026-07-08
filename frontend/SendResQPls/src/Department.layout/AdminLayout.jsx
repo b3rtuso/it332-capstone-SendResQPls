@@ -7,41 +7,18 @@ import "../pages/dashboard/dashboard.css";
 
 function AdminLayout() {
   const location = useLocation();
+  const pathname = location.pathname;
 
-  let title = "Dashboard";
-
-  switch (true) {
-    case location.pathname === "/dashboard":
-      title = "Dashboard";
-      break;
-
-    case location.pathname === "/requests":
-      title = "Requests";
-      break;
-
-    case location.pathname.startsWith("/requests/"):
-      title = "Request Details";
-      break;
-
-    case location.pathname === "/call-logs":
-      title = "Call Logs";
-      break;
-
-    case location.pathname === "/analytics":
-      title = "Analytics & Reports";
-      break;
-
-    case location.pathname === "/departments":
-      title = "Departments";
-      break;
-
-    case location.pathname === "/settings":
-      title = "Settings";
-      break;
-
-    default:
-      title = "Dashboard";
-  }
+  const title = (() => {
+    if (pathname === "/dashboard") return "Dashboard";
+    if (pathname === "/requests") return "Requests";
+    if (pathname.startsWith("/requests/")) return "Request Details";
+    if (pathname === "/call-logs") return "Call Logs";
+    if (pathname === "/analytics") return "Analytics & Reports";
+    if (pathname === "/departments") return "Departments";
+    if (pathname === "/settings") return "Settings";
+    return "Dashboard";
+  })();
 
   return (
     <div className="dashboard">
@@ -61,3 +38,4 @@ function AdminLayout() {
 }
 
 export default AdminLayout;
+
