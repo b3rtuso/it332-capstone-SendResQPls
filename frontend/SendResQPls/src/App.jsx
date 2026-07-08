@@ -6,7 +6,7 @@ import Requests from "./pages/Requests/Requests";
 import RequestDetails from "./pages/RequestDetails/RequestDetails";
 import CallLogs from "./components/Call Logs/CallLogs";
 import Analytics from "./pages/Analytics/Analytics";
-import Settings from "./pages/Settings/Settings";
+import Settings from "/src/components/Dashboard/Settings/Settings";
 
 import AdminLayout from "./Department.layout/AdminLayout";
 import Departments from "./pages/Departments/Departments";
