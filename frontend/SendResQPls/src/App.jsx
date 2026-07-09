@@ -5,11 +5,11 @@ import Dashboard from "./pages/dashboard/dashboard";
 import Requests from "./pages/Requests/Requests";
 import RequestDetails from "./pages/RequestDetails/RequestDetails";
 import CallLogs from "./components/Call Logs/CallLogs";
-import Analytics from "./pages/Analytics/Analytics";
 import Settings from "/src/components/Dashboard/Settings/Settings";
 
 import AdminLayout from "./Department.layout/AdminLayout";
 import Departments from "./pages/Departments/Departments";
+import AnalyReports from "./pages/Analytics & Reports/AnalyReports";
 
 function App() {
   return (
@@ -49,7 +49,7 @@ function App() {
           {/* Analytics & Reports */}
           <Route
             path="/analytics"
-            element={<Analytics />}
+            element={<AnalyReports />}
           />
 
           <Route
