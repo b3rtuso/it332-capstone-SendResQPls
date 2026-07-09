@@ -3,13 +3,31 @@ import { FiMapPin, FiClock, FiEye } from "react-icons/fi";
 
 import requests from "../../data/requests";
 
-function ReqTable() {
+function ReqTable({ searchQuery = "", status = "All Status", type = "All Types" }) {
   const navigate = useNavigate();
+
+  // filter requests based on search, status and type
+  const filtered = requests.filter((r) => {
+    const q = searchQuery.trim().toLowerCase();
+
+    if (status && status !== "All Status" && r.status !== status) return false;
+    if (type && type !== "All Types" && r.type !== type) return false;
+
+    if (!q) return true;
+
+    // match id, name, phone, or location
+    return (
+      String(r.id).toLowerCase().includes(q) ||
+      (r.name && r.name.toLowerCase().includes(q)) ||
+      (r.phone && r.phone.toLowerCase().includes(q)) ||
+      (r.location && r.location.toLowerCase().includes(q))
+    );
+  });
 
   return (
     <div className="request-card request-table-card">
       <div className="table-header">
-        <h2>{requests.length} Requests</h2>
+        <h2>{filtered.length} Requests</h2>
       </div>
 
       <div className="table-container">
@@ -27,7 +45,7 @@ function ReqTable() {
           </thead>
 
           <tbody>
-            {requests.map((request) => (
+            {filtered.map((request) => (
               <tr key={request.id}>
                 <td>
                   <button

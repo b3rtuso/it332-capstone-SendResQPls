@@ -1,4 +1,5 @@
 import { Phone } from "lucide-react";
+import { useState } from "react";
 import "./departments.css";
 
 const departments = [
@@ -37,6 +38,29 @@ const departments = [
 ];
 
 export default function Departments() {
+  const [modalPhone, setModalPhone] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  function openContact(phone) {
+    setModalPhone(phone);
+    setCopied(false);
+    setShowModal(true);
+  }
+
+  function closeModal() {
+    setShowModal(false);
+  }
+
+  async function copyPhone() {
+    try {
+      await navigator.clipboard.writeText(modalPhone);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (e) {
+      alert("Unable to copy to clipboard");
+    }
+  }
   return (
     <div className="department-page">
       <div className="department-heading">
@@ -114,7 +138,7 @@ export default function Departments() {
 
               <div className="card-footer">
 
-                <button className="contact-btn">
+                <button className="contact-btn" onClick={() => openContact(department.phone)}>
                   <Phone size={16} />
                   Contact
                 </button>
@@ -128,6 +152,29 @@ export default function Departments() {
         </div>
 
       </div>
+
+      {showModal && (
+        <div className="contact-modal-backdrop" onClick={closeModal}>
+          <div className="contact-modal" onClick={(e) => e.stopPropagation()}>
+            <h3>Contact</h3>
+            <p className="contact-number">{modalPhone}</p>
+
+            <div className="contact-actions">
+              <a className="call-btn" href={`tel:${modalPhone}`}>
+                Call
+              </a>
+
+              <button className="copy-btn" onClick={copyPhone}>
+                {copied ? "Copied" : "Copy number"}
+              </button>
+
+              <button className="close-btn" onClick={closeModal}>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );

@@ -81,9 +81,18 @@ function CustomSelect({ options, value, onChange, label }) {
   );
 }
 
-function ReqFilters() {
-  const [status, setStatus] = useState("All Status");
-  const [type, setType] = useState("All Types");
+function ReqFilters({ searchQuery, setSearchQuery, status, setStatus, type, setType }) {
+  const [localQuery, setLocalQuery] = useState(searchQuery || "");
+
+  useEffect(() => {
+    setLocalQuery(searchQuery || "");
+  }, [searchQuery]);
+
+  function onInputChange(e) {
+    const v = e.target.value;
+    setLocalQuery(v);
+    setSearchQuery(v);
+  }
 
   return (
     <div className="request-card request-filter-card">
@@ -94,6 +103,8 @@ function ReqFilters() {
           <input
             type="text"
             placeholder="Search by ID, name, or location..."
+            value={localQuery}
+            onChange={onInputChange}
           />
         </div>
 

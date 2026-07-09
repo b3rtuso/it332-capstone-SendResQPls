@@ -1,9 +1,14 @@
 import "./Requests.css";
 
+import { useState } from "react";
 import ReqFilters from "../../components/Requests/ReqFilters";
 import ReqTable from "../../components/Requests/ReqTable";
 
 function Requests() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [status, setStatus] = useState("All Status");
+  const [type, setType] = useState("All Types");
+
   return (
     <div className="requests-page">
       <div className="requests-heading">
@@ -13,8 +18,16 @@ function Requests() {
         </div>
       </div>
 
-      <ReqFilters />
-      <ReqTable />
+      <ReqFilters
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        status={status}
+        setStatus={setStatus}
+        type={type}
+        setType={setType}
+      />
+
+      <ReqTable searchQuery={searchQuery} status={status} type={type} />
     </div>
   );
 }

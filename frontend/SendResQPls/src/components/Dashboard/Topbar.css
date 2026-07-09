@@ -210,3 +210,49 @@
     display: none;
   }
 }
+
+/* notification dropdown */
+.notification-dropdown {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  width: 320px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  z-index: 40;
+}
+
+.notification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.notification-list {
+  max-height: 260px;
+  overflow: auto;
+  padding: 8px 0;
+}
+
+.notification-item {
+  padding: 10px 14px;
+  border-bottom: 1px solid #fbfdfe;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.enable-btn {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.enable-btn:hover { background: #f8fafc; }
