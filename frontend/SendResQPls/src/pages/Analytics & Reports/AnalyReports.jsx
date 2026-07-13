@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./AnalyReports.css";
+import Reports from "../../components/Reports/Reports";
 
 import {
   ResponsiveContainer,
@@ -242,17 +243,23 @@ export default function AnalyReports() {
         </div>
       </div>
 
-      <section className="analytics-summary">
-        {summaryCards.map((card) => (
-          <div className="summary-card" key={card.title}>
-            <p>{card.title}</p>
-            <h2 className={card.color}>{card.value}</h2>
-            <span className={`summary-subtitle ${card.color}`}>
-              {card.subtitle}
-            </span>
-          </div>
-        ))}
-      </section>
+      {activeTab === "Analytics" && (
+      <>
+        <section className="analytics-summary">
+          {summaryCards.map((card) => (
+            <div className="summary-card" key={card.title}>
+              <p>{card.title}</p>
+
+              <h2 className={card.color}>
+                {card.value}
+              </h2>
+
+              <span className={`summary-subtitle ${card.color}`}>
+                {card.subtitle}
+              </span>
+            </div>
+          ))}
+        </section> 
 
       <section className="analytics-grid">
         <div className="analytics-card">
@@ -438,6 +445,19 @@ export default function AnalyReports() {
           </div>
         </div>
       </section>
+    </>
+    )}
+
+          {activeTab === "Reports" && (
+        <Reports />
+      )}
+
+      {activeTab === "Incident Report" && (
+        <div className="analytics-card">
+          <h2>Incident Report</h2>
+          <p>Incident Report module coming soon...</p>
+        </div>
+      )}
     </div>
   );
 }

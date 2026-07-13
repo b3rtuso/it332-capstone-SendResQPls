@@ -1,0 +1,317 @@
+/* ==========================================
+   REPORTS MODULE
+========================================== */
+
+.reports-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.report-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.report-card h2 {
+  margin: 0 0 26px;
+  color: #111827;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* ==========================================
+   TOOLBAR
+========================================== */
+
+.report-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.filters {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.filter-group select {
+  width: 170px;
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid #dbe3ee;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #111827;
+  font-size: 14px;
+  outline: none;
+  transition: 0.25s;
+}
+
+.filter-group select:hover {
+  border-color: #2563eb;
+}
+
+.filter-group select:focus {
+  border-color: #2563eb;
+  background: #ffffff;
+}
+
+/* ==========================================
+   EXPORT BUTTONS
+========================================== */
+
+.export-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.export-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  height: 42px;
+  padding: 0 18px;
+
+  background: #ffffff;
+  border: 1px solid #dbe3ee;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+
+  transition: all .25s ease;
+}
+
+.export-buttons button:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.export-buttons button svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ==========================================
+   SUMMARY CARDS
+========================================== */
+
+.report-summary {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 18px;
+}
+
+.summary-box {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(15,23,42,.06);
+}
+
+.summary-box h3 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.summary-box span {
+  display: block;
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.summary-box.resolved h3 {
+  color: #14b8a6;
+}
+
+.summary-box.pending h3 {
+  color: #f59e0b;
+}
+
+.summary-box.affected h3 {
+  color: #ef4444;
+}
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+thead th {
+  text-align: left;
+  padding: 16px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+tbody tr {
+  border-bottom: 1px solid #edf2f7;
+  transition: .25s;
+}
+
+tbody tr:hover {
+  background: #f8fbff;
+}
+
+tbody td {
+  padding: 18px 0;
+  color: #111827;
+  font-size: 14px;
+}
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 84px;
+  height: 30px;
+
+  padding: 0 14px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status.pending {
+  background: #FEF3C7;
+  color: #B45309;
+}
+
+.status.resolved {
+  background: #DCFCE7;
+  color: #15803D;
+}
+
+.status.dispatched {
+  background: #DBEAFE;
+  color: #1D4ED8;
+}
+
+.status.enroute {
+  background: #E0E7FF;
+  color: #4338CA;
+}
+
+.status.called {
+  background: #F3E8FF;
+  color: #7C3AED;
+}
+
+.status.arrived {
+  background: #DBF4FF;
+  color: #0284C7;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:1100px){
+
+.report-summary{
+grid-template-columns:repeat(2,1fr);
+}
+
+.report-toolbar{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.filters{
+width:100%;
+}
+
+}
+
+@media (max-width:768px){
+
+.report-summary{
+grid-template-columns:1fr;
+}
+
+.filters{
+flex-direction:column;
+width:100%;
+}
+
+.filter-group{
+width:100%;
+}
+
+.filter-group select{
+width:100%;
+}
+
+.export-buttons{
+width:100%;
+}
+
+.export-buttons button{
+flex:1;
+justify-content:center;
+}
+
+.report-card{
+padding:18px;
+}
+
+.report-card h2{
+font-size:22px;
+}
+
+}
