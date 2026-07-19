@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./AnalyReports.css";
 import Reports from "../../components/Reports/Reports";
+import IncidentReport from "../../components/Reports/IncidentReport";
 
 import {
   ResponsiveContainer,
@@ -452,12 +453,7 @@ export default function AnalyReports() {
         <Reports />
       )}
 
-      {activeTab === "Incident Report" && (
-        <div className="analytics-card">
-          <h2>Incident Report</h2>
-          <p>Incident Report module coming soon...</p>
-        </div>
-      )}
+      {activeTab === "Incident Report" && <IncidentReport />}
     </div>
   );
 }
