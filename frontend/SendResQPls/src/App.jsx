@@ -5,9 +5,9 @@ import Dashboard from "./pages/dashboard/dashboard";
 import Requests from "./pages/Requests/Requests";
 import RequestDetails from "./pages/RequestDetails/RequestDetails";
 import CallLogs from "./components/Call Logs/CallLogs";
-import Settings from "/src/components/Dashboard/Settings/Settings";
+import Settings from "./components/Dashboard/Settings/Settings";
 
-import AdminLayout from "./Department.layout/AdminLayout";
+import AdminLayout from "./Admin Layout/AdminLayout";
 import Departments from "./pages/Departments/Departments";
 import AnalyReports from "./pages/Analytics & Reports/AnalyReports";
 
